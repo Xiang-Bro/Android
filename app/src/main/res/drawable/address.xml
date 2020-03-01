@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--设置订单中地址框的背景和样式-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="#FEFEFE"></solid>
+    <corners android:radius="25dp"></corners>
+    <stroke android:width="0dp"></stroke>
+
+</shape>

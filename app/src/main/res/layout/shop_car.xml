@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:background="#F2F2F2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Shop_car">
+
+        <TextView
+            android:id="@+id/tv"
+            android:background="#12D6BC"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="购物车"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"/>
+
+        <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                //显示加入购物车的商品
+                <ListView
+                        android:id="@+id/car_lv"
+                        android:layout_above="@id/buy"
+                        android:divider="@null"
+                        android:dividerHeight="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                //支付栏
+                <LinearLayout
+                        android:id="@+id/buy"
+                        android:layout_above="@id/lead"
+                        android:layout_marginBottom="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                    <CheckBox
+                            android:id="@+id/all"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="全选"/>
+
+                    <TextView
+                            android:id="@+id/money"
+                            android:text="合计： ￥0"
+                            android:textColor="#FF5000"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"/>
+                    <Button
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/car_btn"
+                            android:text="支付"
+                            android:onClick="Purchase"/>
+                </LinearLayout>
+
+                //图标，导航栏
+                <LinearLayout
+                        android:id="@+id/lead"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:background="#FFFFFF">
+
+                    <ImageView
+                            android:src="@mipmap/home_before"
+                            android:id="@+id/main"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:onClick="Main"/>
+
+                    <ImageView
+                            android:src = "@mipmap/shopping_before"
+                            android:id="@+id/shop"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"/>
+
+                    <ImageView
+                            android:src = "@mipmap/me_before"
+                            android:id="@+id/me"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:onClick="Me"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+</LinearLayout>

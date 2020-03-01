@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--用来展示 主页 商品的ListView布局-->
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="#FEFEFE"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <com.loopj.android.image.SmartImageView
+            android:id="@+id/img"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="100dp"/>
+
+    <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="100dp">
+        <TextView
+                android:id="@+id/describe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"/>
+        <TextView
+                android:id="@+id/price"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+</LinearLayout>
